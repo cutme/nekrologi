@@ -1,0 +1,47 @@
+.c-pagination {
+	margin-bottom: 30px;
+
+	li {
+		display: inline-block;
+		
+		a {
+			@include border-radius( 4px );
+			display: block;
+			padding: 10px 12px;
+			line-height: 1;
+			font-family: $lato;
+			color: $black-brightest;
+			
+			&:hover {
+				background-color: rgba($white-darker, .2);
+			}			
+		}
+
+		&.current {
+			a {
+				background-color: $white-darker;
+				color: $black-brighter;
+			}
+		}
+		
+		&.next {
+			a {
+				&:after {
+					font-size: 12px;
+					letter-spacing: -2px;
+					content: '>>';
+				}
+			}
+		}
+		
+		&.prev {
+			a {
+				&:after {
+					font-size: 12px;
+					letter-spacing: -2px;
+					content: '<<';
+				}
+			}
+		}
+	}
+}

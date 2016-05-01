@@ -1,0 +1,43 @@
+[class^="icon-"], [class*=" icon-"] {
+	@include icomoon;
+}
+
+.bottom-buffer {
+	margin-bottom: 60px;
+}
+
+.u-align-center {
+	text-align: center;
+}
+
+.u-pos-y {
+	@include scut-center-transform(y);
+}
+
+.u-wrap {
+	white-space: normal !important;
+}
+
+.safari {
+	* {
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+	}
+}
+
+.color-black-brightest {
+	color: $black-brightest;
+}
+
+.bg-white-darker {
+	background-color: $white-darker;
+	
+	.o-box__content {
+		background-color: $white-darker;
+	}
+}
+
+.picker__select--month,
+.picker__select--year {
+	padding: 0 0.5em !important;
+}

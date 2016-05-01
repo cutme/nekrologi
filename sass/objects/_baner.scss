@@ -1,0 +1,15 @@
+.o-baner {
+	margin-bottom: 30px;
+
+	.o-media {
+		margin: 0 auto;
+	}
+	
+	&--v {
+		.o-media {
+			@media screen and ( max-width: 768px ) {
+				width: grid(160, 768);
+			}			
+		}
+	}
+}

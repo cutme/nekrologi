@@ -1,0 +1,54 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@import "settings/colors";
+@import "settings/global";
+
+@import "tools/clear";
+@import "tools/functions";
+@import "tools/mixins";
+@import "tools/scut";
+@import "tools/animations";
+@import "tools/flexbox";
+@import "tools/checkbox";
+
+@import "generic/box-sizing";
+
+@import "elements/form";
+@import "elements/headings";
+@import "elements/page";
+@import "elements/typography";
+
+@import "objects/baner";
+@import "objects/box";
+@import "objects/buttons";
+@import "objects/container";
+@import "objects/content";
+@import "objects/form";
+@import "objects/header";
+@import "objects/layout";
+@import "objects/media";
+@import "objects/regular";
+@import "objects/sidebar";
+@import "objects/tabs";
+@import "objects/wrap";
+
+@import "components/bar";
+@import "components/bg-photo";
+@import "components/comments";
+@import "components/copyrights";
+@import "components/form-comments";
+@import "components/form-necrology";
+@import "components/form-search";
+@import "components/kir";
+@import "components/logo";
+@import "components/memories";
+@import "components/nav";
+@import "components/nav-trigger";
+@import "components/necrology";
+@import "components/pagination";
+@import "components/profile";
+@import "components/quote";
+@import "components/upload";
+
+@import "trumps/trumps";

@@ -1,0 +1,50 @@
+h1 {
+	font-size: em(48);
+}
+
+h2 {
+	font-size: em(30);
+}
+
+h3 {
+	line-height: 1.2;
+	font-size: em(24);
+}
+
+h6 {
+	font-size: em(14);
+}
+
+@media screen and ( min-width: 1024px ) and ( max-width: 1350px ) {
+	h3 {
+		font-size: 1.775vw;
+	}
+	
+	h6 {
+		font-size: 1.036vw;
+	}
+}
+
+@media screen and ( max-width: 480px ) {
+	h1 {
+		font-size: 10vw;
+	}
+	
+	h2 {
+		font-size: 6.25vw;
+	}
+
+	h3 {
+		font-size: 5vw;
+	}
+	
+	h6 {
+		font-size: 2.9vw;
+	}
+}
+
+@media screen and ( max-width: 375px ) {
+	h3 {
+		font-size: em(20);
+	}
+}

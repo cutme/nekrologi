@@ -1,0 +1,35 @@
+.o-btn {
+	@include hover;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-color: $black;
+	line-height: 50px;
+	text: {
+		align: center;
+		transform: uppercase;
+	}
+	font: {
+		family: $text;
+		size: em(16);
+	}
+	color: white;
+	cursor: pointer;
+	
+	&:hover {
+		.no-mobile & {
+			background-color: lighten( $black, 10% );
+			letter-spacing: 2px;
+		}
+	}
+	
+	&--simple-hover {
+		&:hover {
+			letter-spacing: normal !important;
+		}
+	}
+	
+	&:active {
+		background-color: $black;
+	}
+}

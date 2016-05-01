@@ -1,0 +1,14 @@
+.c-kir {
+	@include transform(rotate(-45deg));
+	position: absolute;
+	right: -37px;
+	bottom: 34px;
+	z-index: 10;
+	width: 180px; height: 35px;
+	background-color: black;
+	
+	@media screen and ( max-width: 480px ) {
+		right: -80px;
+		height: 25px;
+	}
+}

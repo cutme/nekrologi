@@ -1,0 +1,42 @@
+.c-profile {
+	li {
+		margin-bottom: 5px;
+		color: $black-brightest;
+		
+		strong {
+			color: $black-brighter;
+		}
+	}
+	
+	&--border {
+		li {
+			border-bottom: 1px solid $gray-lighter;
+		}
+	}
+	
+	&--justify {
+		//@media screen and ( min-width: 481px ) {		
+			li {
+				@include clear;
+				
+				.c-profile__lead {
+					float: left;
+				}
+				
+				.c-profile__txt {
+					float: right;
+				}
+			}
+		//}
+	}
+	
+	&--simple {
+		li {
+			margin-bottom: 10px;
+			
+			.c-profile__lead {
+				display: block;
+			}
+		}
+	}
+}

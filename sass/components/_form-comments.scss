@@ -1,0 +1,42 @@
+.c-form-comments {	
+	textarea {
+		height: 170px;
+	}
+	
+	.o-form__half {
+		width: grid(290, $content_width);
+		margin: 0 grid(30, $content_width) 30px 0;		
+		
+		&.o-form__submit {
+			margin-right: 0;
+		}
+
+		@media screen and ( min-width: 480px ) {
+			&.o-form__submit {
+				width: grid(170, $content_width);
+				
+				button {
+					height: 64px;
+					line-height: 64px;
+				}
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 479px ) {
+		.o-form__half {
+			float: left;
+			width: 48%;
+			margin-right : 0;
+			
+			&:nth-child(2) {
+				float: right;
+			}
+		
+			&.o-form__submit {
+				@include clear;
+				width: 100%;
+			}
+		}
+	}
+}

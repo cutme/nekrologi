@@ -1,0 +1,33 @@
+.c-form-necrology {
+	margin-bottom: 40px;
+	
+	&__note {
+		text-align: left;
+		color: $gray;
+	}
+	
+	.o-form__fields {
+		@media screen and ( min-width: 941px ) {
+			&--left,
+			&--right {
+				width: grid(390, $content_width);
+			}
+		}
+		
+		@media screen and ( max-width: 940px ) {
+			float: none;
+		}		
+	}
+
+	.o-form__half {
+		width: grid(175, 390);
+	}
+	
+	.o-header {
+		h2 {
+			font-size: em(38);
+		}
+	}
+	
+	
+}

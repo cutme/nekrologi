@@ -1,0 +1,27 @@
+.c-copyrights {
+	right: 0;
+	
+	small {
+		font-size: 10px;		
+	}
+
+	@media screen and ( min-width: 481px ) {
+		small {
+			margin-right: 10px;
+		}
+
+		.o-media {
+			display: inline-block;
+			vertical-align: middle;		
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		
+		small {
+			display: block;
+			margin-bottom: 6px;
+			text-align: right;
+		}
+	}
+}

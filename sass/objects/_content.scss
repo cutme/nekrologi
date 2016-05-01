@@ -1,0 +1,12 @@
+.o-content {
+
+	&--full {
+		float: none !important;
+		width: 100% !important;
+	}
+
+	@media screen and ( min-width: 768px ) {
+		float: left;
+		width: grid($content-width);
+	}
+}

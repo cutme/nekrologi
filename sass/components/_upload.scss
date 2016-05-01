@@ -1,0 +1,54 @@
+.c-upload {
+	position: relative;
+	overflow: hidden;
+
+	.o-btn {
+		float: left;
+		width: grid(140, 390);
+		height: 40px;
+		line-height: 40px;
+		font-size: em(14);
+		text-transform: none;
+
+		.o-btn__title {
+			position: relative; z-index: 2;
+			color: white;
+		}
+
+		input[type='file'] {
+			@include opacity(0);
+			position: absolute;
+			left: 0; top: 0;
+			z-index: 3;
+			display: block;
+			cursor: inherit;
+			font-size: 999px;
+			min-height: 100%;
+			min-width: 100%;
+			text-align: right;
+		}
+	}
+	
+	&__input {
+		float: left;
+		width: grid(250, 390);
+		background-color: $white-darker;
+		height: 40px;
+		padding: 0 20px;
+		line-height: 40px;
+		text: {
+			align: left;
+			overflow: ellipsis;
+		}
+		font-size: 12px;
+		overflow: hidden;
+	}
+
+	&.file-added {
+		.o-button__title {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

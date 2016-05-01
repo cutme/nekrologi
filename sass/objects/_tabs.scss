@@ -1,0 +1,54 @@
+.o-tabs {
+	&__nav {
+		margin-bottom: 40px;
+				
+		li {			
+			&.is-active {
+				@include opacity(.5);
+			}
+		}
+		
+		&--buttons {
+		
+			ul {
+				display: table;
+				width: 100%;
+			}
+			
+			li {
+				display: table-cell;
+				width: 33.333%;
+				
+				&:nth-child(2) {
+					border-left: 5px solid #ccc;
+					border-right: 5px solid #ccc;
+				}
+				
+				br {
+					@media screen and ( max-width: 480px ) {
+						display: none;
+					}
+				}
+			}
+			
+			.o-btn {
+				padding: 0 20px;
+				line-height: 1.2;
+				vertical-align: middle;
+				
+				@media screen and ( max-width: 1230px ) {
+					font-size: em(13);
+				}
+				
+			}
+		}
+	}
+
+	&__item {
+		display: none;
+		
+		&.is-active {
+			display: block;
+		}
+	}
+}

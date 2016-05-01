@@ -1,0 +1,81 @@
+.c-nav {
+
+	&--footer {
+		left: -20px;		
+	}
+	
+	&--top {
+		right: 0;		
+	}
+
+	li {
+		display: inline-block;
+
+		a {
+			display: block;
+			padding: 10px 20px;
+			
+			&:hover {
+				background-color: rgba(white, .1);
+			}
+		}
+	}
+	
+	&.is-mobile {
+		@include box-shadow( rgba( black, .5 ) 0 20px 40px );
+		display: none;
+		position: absolute;
+		top: 90px; left: 0;
+
+		li {
+			display: block;
+			
+			a {
+				background-color: $black;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		&.is-mobile {
+			li {
+				&:last-child {
+					a {
+						padding-bottom: 20px;
+					}
+				}
+			}
+		}
+
+		&--footer {
+			left: -10px;
+
+			li {
+				float: left;
+				
+				&:nth-child(2n+1) {
+					clear: left;
+				}
+				
+				a {
+					padding: 5px 10px;
+					font-size: em(14);
+				}
+			}
+		}
+		
+		&--top {
+			display: none;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		&--footer {
+			li {
+				a {
+					font-size: em(12);
+				}
+			}
+		}
+	}
+}

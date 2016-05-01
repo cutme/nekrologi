@@ -1,0 +1,34 @@
+.c-form-search {
+	margin-bottom: 40px;
+
+	.o-form__fields {
+		border-bottom: 1px dotted $black;
+	}
+
+	.o-form__half {
+		width: grid(142, 285);
+		
+		@media screen and ( max-width: 767px ) {
+			width: grid(300, 640);
+		}
+
+		.label {
+			width: grid(50, 125);
+			
+			@media screen and ( max-width: 767px ) {
+				width: grid(50, 300);
+				text-align: left;
+			}
+		}
+	
+		input {
+			width: grid(75, 125);
+			font-size: 11px;
+			padding: 0 2px;
+			
+			@media screen and ( max-width: 767px ) {
+				width: grid(250, 300);
+			}
+		}
+	}
+}

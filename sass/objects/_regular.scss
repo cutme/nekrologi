@@ -1,0 +1,20 @@
+.o-regular {
+	p {
+		margin-bottom: 1.5em;
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.align-left {
+		float: left;
+		margin: 0 30px 30px 0;
+	}
+
+	.align-right {
+		float: right;
+		margin: 0 0 30px 30px;
+	}
+}

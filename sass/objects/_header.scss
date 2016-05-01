@@ -1,0 +1,48 @@
+.o-header {
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	line-height: 1.2;
+	
+	
+	.o-box__content & {
+		.c-necrology & {
+			@include flexbox;
+			@include align-items(center);
+		}
+	}
+	
+	&__name {
+		margin-bottom: 4px;
+	}
+	
+	&--border {
+		border-bottom: 1px solid #b1b1b1;
+	}
+	
+	&--border-light {
+		border-bottom: 1px solid #dedede;
+	}
+	
+	&__date {
+		&--lead {
+			display: inline-block;
+			width: 30px;
+		}
+	}
+	
+	&__person {
+		width: grid(260, 330);
+		vertical-align: middle;
+	}
+	
+	@media screen and ( max-width: 479px ) {
+		&__name,
+		&__date {
+			.o-box--photo &,
+			.o-box--photo-big & {
+				text-align: center;
+			}
+		}
+	}
+}

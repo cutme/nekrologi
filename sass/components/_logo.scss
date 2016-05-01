@@ -1,0 +1,9 @@
+.c-logo {
+	@include transition-property(none);
+	display: block;
+	width: 280px;
+	
+	@media screen and ( max-width: 479px ) {
+		width: 220px;
+	}
+}

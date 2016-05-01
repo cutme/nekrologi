@@ -1,0 +1,91 @@
+.o-form {
+	margin-bottom: 30px;
+	text-align: center;
+
+	input[type='text'], input[type='email'], input[type='password'], textarea {
+		@include hover;
+		background-color: $white-darker;
+		
+		&:focus {
+			background-color: white;
+		}
+	}
+
+	input[type='text'], input[type='email'], input[type='password'] {
+		height: 40px;
+		padding: 0 20px;
+		text-align: center;		
+	}
+	
+	label {
+		white-space: nowrap;
+	}
+
+	textarea {
+		height: 325px;
+		padding: 20px;
+	}
+	
+	&__fields {
+		margin-bottom: 20px;
+		
+		&--left {
+			float: left;
+		}	
+		
+		&--right {
+			float: right;
+		}
+	}
+	
+	&__item {
+		@include clear;
+		display: block;
+		margin-bottom: 20px;
+	}
+	
+	&__lead {
+		@include clear;
+		display: block;
+		margin-bottom: 5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: em(14);
+		color: $black-brightest;
+	}
+	
+	&__half {
+		float: left;
+		overflow: hidden;
+
+		.label {
+			float: left;
+			line-height: 40px;
+			font-size: em(14);
+			color: $black-brightest;
+		}
+		
+		input {
+			float: left;
+		}
+
+		&--right {
+			float: right;
+		}
+	}
+	
+	&__required {
+		color: rgba(red, .7);
+	}
+	
+	.has-error {
+		input, textarea {
+			border: 1px solid rgba(red, .7);
+		}
+		
+		.mce-edit-area {
+			border-color: solid rgba(red, .7) !important;
+			border: 1px solid red !important;
+		}
+	}
+}
