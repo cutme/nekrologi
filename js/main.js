@@ -103,12 +103,17 @@ jQuery(function($) {
 			var el = $('form'),
 				error = 0,
 				errorClass = 'has-error',
-				check,
+				check, editorContent,
 				reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 			function checkField(o) {				
 				if ($(o).val() == '') {
-					$(o).parent().addClass(errorClass);
+				
+					if ($(o).attr('type') == 'file') {
+						$(o).parents('.js-upload').addClass(errorClass);	
+					} else {
+						$(o).parent().addClass(errorClass);
+					}
 					return false;
 				}
 				return true;
@@ -116,7 +121,7 @@ jQuery(function($) {
 			var validateStart = function(o) {
 				error = 0;
 				el.find('.has-error').removeClass(errorClass);
-				$('[type=text], [type=tel], [type=password], [type=date], textarea', o).each(function() {
+				$('[type=text], [type=tel], [type=password], [type=date], [type=file]', o).each(function() {
 					if ( $(this).prop('required') === true ) {
 						check = checkField(this);
 						if (check === false) {
@@ -124,6 +129,24 @@ jQuery(function($) {
 						}
 					}
 				});
+				$('textarea', o).each(function() {
+					if ( $(this).prop('required') === true ) {
+					
+						if ( $(this).parents('.o-form__fields').find('iframe').contents().find("body").text() == '' ) {
+							$(this).parent().addClass(errorClass);
+							error = 1;
+						}
+/*
+editorContent = tinyMCE.get('tinyeditor').getContent();
+						if (editorContent == '') {
+							error = 1;
+						}
+*/
+					}
+				});
+				
+				
+				
 				$('[type=email], [type=text], [type=password]', o).on('keydown', function() {
 					$(this).parent().removeClass(errorClass);
 				});
@@ -156,7 +179,7 @@ jQuery(function($) {
 			el.each(function() {
 				var submit = $('.submit', this),
 					is_error, _t = $(this);
-				$('input, textarea, select', this).each(function() {
+				$('input, select', this).each(function() {
 					if ($(this).prop('required')) {
 						$(this).prev('.o-form__lead').append(' <i class="o-form__required">*</i>');
 					}
@@ -164,7 +187,6 @@ jQuery(function($) {
 				submit.on('click', function(e) {
 					e.preventDefault();
 					is_error = validateStart(_t);
-					//alert('e: ' +is_error);
 					if (is_error === 1) {
 						goToTarget(_t);
 					} else {

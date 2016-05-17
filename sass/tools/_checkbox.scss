@@ -10,11 +10,24 @@ span.ui-radio {
 }
 
 span.ui-checkbox {
-	top: 2px;
+	top: 5px;
 	border: 1px solid #aaa;
 	text-align: center;
 	line-height: 20px;
 	overflow: hidden;
+	
+	&:after {
+		position: absolute;
+		left: 0; top: 0;
+		width: 18px; height: 18px;
+		display: none;
+		line-height: 17px;
+		text-align: center;
+		color: white;
+		padding-left: 2px;
+		font-weight: 300;
+		content: 'x';
+	}
 }
 
 span.ui-radio {
@@ -40,6 +53,10 @@ span.ui-checkbox-state-checked,
 span.ui-checkbox-state-checked-hover {
 	background-color: $black;
 	border: none;
+	
+	&:after {
+		display: block;
+	}
 }
 
 span.ui-radio-state-checked-disabled {
@@ -47,7 +64,7 @@ span.ui-radio-state-checked-disabled {
 
 span.ui-radio-state-checked,
 span.ui-radio-state-checked-hover {
-	&:before {
+	&:after {
 		display: block;
 	}
 } // radio on

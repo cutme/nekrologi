@@ -13,7 +13,7 @@
 
 	<div class="c-bar fixed">
 		<div class="o-wrap">
-			<a href="index.html" class="c-logo u-pos-y">
+			<a href="#" class="c-logo u-pos-y">
 				<img src="img/logo.png" alt="" class="o-media" />
 			</a>
 			
@@ -28,7 +28,7 @@
 					</li>
 					
 					<li>
-						<a href="formularz.html">Dodaj wpis</a>
+						<a href="dodaj-wpis.html">Dodaj wpis</a>
 					</li>
 				</ul>
 			</nav>
@@ -59,174 +59,50 @@
 			
 			<div class="o-wrap">
 				<div class="o-content">
-				
-					<div class="o-tabs js-tabs">
-						<nav class="o-tabs__nav o-tabs__nav--buttons clear">
-							<ul>
-								<li class="o-btn o-btn--simple-hover is-active">dodaj nekrolog</li>
-								<li class="o-btn o-btn--simple-hover">dodaj wspomnienie</li>
-								<li class="o-btn o-btn--simple-hover">dodaj nekrolog<br /> i wspomnienie</li>
-							</ul>
-						</nav>
+					
+					<div class="o-header o-header--border">
+						<h1>Kontakt</h1>
+					</div>
+					
+					<div class="o-regular">
 						
-						<form action="#" class="o-form c-form-necrology">						
+												
+						<form action="/" class="o-form c-form-necrology" method="post" enctype="multipart/form-data">						
 							<fieldset class="o-form__fields o-form__fields--left">
-								<div class="o-header">
-									<h2>Twoje dane</h2>
-								</div>
-								
+
 								<label class="o-form__item">
 									<span class="o-form__lead">Twoje imię i nazwisko</span>
-									<input type="text" required />
+									<input type="text" name="Zgłaszający" required />
 								</label>
-								
+
 								<label class="o-form__item">
 									<span class="o-form__lead">Twój adres e-mail</span>
-									<input type="email" />
+									<input type="email" name="Email" required />
 								</label>
-								
+
 								<label class="o-form__item">
 									<span class="o-form__lead">Telefon</span>
-									<input type="text" />
+									<input type="text" name="Telefon" />
 								</label>
-								
-								<span class="o-form__lead bottom-buffer">
-									<label class="u-wrap">
-										<input type="checkbox" name="Powiadomienia" class="u-pull-right" />
-										Zaznacz, jeśli chcesz otrzymywać mailem powiadomienia o gratulacjach						
-									</label>
-								</span>
-								
-								<h6 class="c-form-necrology__note">
-									Podanie poprawnych danych jest niezbędne w celu weryfikacji zgoszenia przez administratorów portalu.
-								</h6>
+
 							</fieldset>
-							
+
 							<fieldset class="o-form__fields o-form__fields--right">
-								<div class="o-header">
-									<h2>Dane zmarłego</h2>
+								<div class="o-form__item">
+									<span class="o-form__lead">Wiadomość</span>
+									<textarea name="Wiadomosc"></textarea>
 								</div>
 								
-								<div class="o-form__item">
-									<span class="o-form__half">
-										<label>
-											<span class="o-form__lead">Imię zmarłego</span>
-											<input type="text" />
-										</label>
-									</span>
-									
-									<span class="o-form__half o-form__half--right">
-										<label>
-											<span class="o-form__lead">Drugie imię zmarłego</span>
-											<input type="text" />
-										</label>
-									</span>
-								</div>
-								
-								<label class="o-form__item">
-									<span class="o-form__lead">Nazwisko zmarłego</span>
-									<input type="text" />
-								</label>
-								
-								<div class="o-form__item">
-									<span class="o-form__half">
-										<span class="o-form__lead">Data urodzenia</span>
-										<input type="text" class="js-datepicker" />
-									</span>
-									
-									<span class="o-form__half o-form__half--right">
-										<label>
-											<span class="o-form__lead">Miejsce urodzenia</span>
-											<input type="text" />
-										</label>
-									</span>
-								</div>	
-								
-								<div class="o-form__item">
-									<span class="o-form__half">
-										<span class="o-form__lead">Data śmierci</span>
-										<input type="text" class="js-datepicker" />
-									</span>
-									
-									<span class="o-form__half o-form__half--right">
-										<label>
-											<span class="o-form__lead">Miejsce śmierci</span>
-											<input type="text" />
-										</label>
-									</span>
-								</div>
-								
-								<div class="o-form__item">
-									<span class="o-form__half">
-										<label>
-											<span class="o-form__lead">Miejsce pochówku</span>
-											<input type="text" />
-										</label>
-									</span>
-									
-									<span class="o-form__half o-form__half--right">
-										<label>
-											<span class="o-form__lead">Ost. miejsce zamieszkania</span>
-											<input type="text" />
-										</label>
-									</span>
-								</div>
-								
-								<label class="o-form__item">
-									<span class="o-form__lead">Zdjęcie zmarłego</span>
-	
-									<div class="c-upload js-upload">
-										<div class="o-btn o-btn--simple-hover">
-											<input type="file" id="file" required />
-											Wybierz plik
-										</div>
-										
-										<div class="c-upload__input"></div>
-									</div>
-									
-								</label>
+								<button type="submit" class="o-btn submit">Zapisz się</button>
 							</fieldset>
-							
-							<ul class="o-tabs__content clear">
-								<li class="o-tabs__item">
-									<fieldset class="o-form__fields clear">
-										<div class="o-header">
-											<h2>Treść nekrologu</h2>
-										</div>
-										
-										<div class="o-form__item">
-											<textarea required></textarea>
-										</div>
-									</fieldset>								
-								</li>
-								
-								<li class="o-tabs__item">
-									<fieldset class="o-form__fields clear">
-										<div class="o-header">
-											<h2>Treść wspomnienia</h2>
-										</div>
-										
-										<div class="o-form__item">
-											<textarea></textarea>
-										</div>
-									</fieldset>
-								</li>
-							</ul>
-						
-							<fieldset class="o-form__submit">
-								<button type="submit" class="o-btn submit">Dodaj wpis</button>
-							</fieldset>
+
 						</form>
-					</div><!-- /tabs -->
-					
-					
-					<div class="o-baner">
-						<a href="#">
-							<img src="img/_ban_728.jpg" alt="" class="o-media" />
-						</a>
+
+
 					</div>
 
-				
+					
+					
 				</div><!-- /content -->
 
 				<aside class="o-sidebar">					
@@ -308,7 +184,7 @@
 	</footer>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" data-headjs-load="js/init.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" data-headjs-load="js/init.js"></script>
 
 <script type="text/javascript">WebFontConfig={google:{families:['Lato::latin,latin-ext','Lora:400,700,400italic:latin']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
 

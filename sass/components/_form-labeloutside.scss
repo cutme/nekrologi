@@ -1,0 +1,24 @@
+.c-form-labeloutside {
+	margin-bottom: 40px;
+	text-align: left;
+	
+	input[type='text'], input[type='email'], input[type='password'] {
+		text-align: left;
+	}
+
+	.o-header {
+		h2 {
+			font-size: em(38);
+		}
+	}
+	
+	.o-form__submit {
+		.o-form__label {
+			
+		}
+	}
+	
+	textarea {
+		height: 200px;
+	}
+}

@@ -38,10 +38,21 @@
 		}
 	}
 	
+	&__field {
+		width: 60%;
+	}
+	
 	&__item {
 		@include clear;
 		display: block;
 		margin-bottom: 20px;
+	}
+	
+	&__label {
+		width: 40%;
+		padding-right: 20px;
+		line-height: 38px;
+		text-align: right;
 	}
 	
 	&__lead {
@@ -87,5 +98,28 @@
 			border-color: solid rgba(red, .7) !important;
 			border: 1px solid red !important;
 		}
+		
+		.c-upload__input {
+			border: 1px solid rgba(red, .7);
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		&__field,
+		&__label {
+			width: 100%;
+			padding: 0;
+			text-align: left;
+		}
+		
+		&__submit {
+			.o-form__label {
+				.c-form-labeloutside & {
+					display: none;
+				}
+			}
+		
+		}
+		
 	}
 }
