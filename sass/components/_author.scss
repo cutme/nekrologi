@@ -1,0 +1,17 @@
+.c-author {
+	padding: 40px 0 0 0;
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: $gray;
+	
+	.c-memories & {
+		margin-bottom: -25px;
+	}
+	
+	.c-necrology & {
+		position: absolute;
+		right: -15px;
+		bottom: -35px;
+		text-align: right;
+	}
+}

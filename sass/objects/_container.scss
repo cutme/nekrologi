@@ -3,6 +3,7 @@
 	@include border-top-right-radius;
 	position: relative; z-index: 5;
 	max-width: 1600px;
+	min-height: 690px;
 	background-image: url(../img/pattern.png);
 	margin: 0 auto;
 	padding: 40px;

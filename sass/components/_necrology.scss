@@ -28,7 +28,7 @@
 		@include box-shadow( white 0 0 0 5px inset);
 		position: relative;
 		border: 13px solid black;
-		margin-bottom: 30px;
+		margin-bottom: 50px;
 		padding: 155px grid(80, $content_width) 50px grid(80, $content_width);
 
 		&:after {

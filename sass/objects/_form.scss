@@ -26,6 +26,14 @@
 		padding: 20px;
 	}
 	
+	&--center {
+		@include clear;
+		
+		.o-form__fields {
+			display: inline-block;
+		}
+	}
+	
 	&__fields {
 		margin-bottom: 20px;
 		
